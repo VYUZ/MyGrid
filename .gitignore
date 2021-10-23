@@ -1,0 +1,26 @@
+# Игнорирование логов 
+logs 
+*.log 
+
+# Игнорирование файлов специфичных для IDE 
+.vscode/ 
+
+# browsersync
+browsersync.bat
+
+# Папка с оригинальными картинками
+/img/img_orig/
+
+# Source
+src/
+
+# local fonts not needed, i use google fonts
+#fonts/
+
+#gulp npm mods
+node_modules/
+package*.json
+
+#templates
+*.psd
+

@@ -1,0 +1,13 @@
+$container-max-width: 1140px !default;
+$grid-columns: 12 !default;
+$grid-gap: 30px !default;
+$grid-gap-side: $grid-gap / 2;
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px,
+) !default;

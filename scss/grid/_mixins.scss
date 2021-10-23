@@ -1,0 +1,41 @@
+@mixin col($size: false) {
+  @if $size {
+    flex: 0 0 auto;
+    width: calc(#{percentage($size / $grid-columns)} - #{$grid-gap});
+  } @else {
+    flex: 1 0 0%;
+  }  
+}
+
+@mixin media($width) {
+  @media (min-width: $width) {
+    @content;
+  }
+}
+
+@mixin bp($name) {
+  $width: map-get($grid-breakpoints, $name);
+  @include media($width) {
+    @content;
+  }
+}
+
+@mixin container {
+  margin: 0 auto;
+  max-width: $container-max-width;
+  width: 100%;
+  padding-left: $grid-gap-side;
+  padding-right: $grid-gap-side;
+
+  outline: 2px solid lime;
+}
+
+@mixin row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -$grid-gap-side;
+  margin-right: -$grid-gap-side;
+  > * {
+    margin: $grid-gap-side;
+  }
+}
